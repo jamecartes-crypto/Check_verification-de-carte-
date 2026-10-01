@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verification de recharge</title>
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: #333333;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 2px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Interface de Test</h2>
+        <p>Entrez votre texte :</p>
+        <input type="text" id="champSaisie" placeholder="Écrivez ici...">
+        <button id="btnAction">Exécuter</button>
+    </div>
+
+    <script>
+        document.getElementById('btnAction').addEventListener('click', function() {
+            var contenuTexte = document.getElementById('champSaisie').value;
+            if (contenuTexte === "") {
+                alert("Le champ est vide !");
+            } else {
+                alert("Texte reçu localement : " + contenuTexte);
+            }
+        });
+    </script>
+
+</body>
+</html>
